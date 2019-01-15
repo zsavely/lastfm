@@ -15,6 +15,8 @@ namespace IF.Lastfm.Core.Objects
 
         #endregion
 
+        #region Constructors
+
         public LastShout()
         {
         }
@@ -25,7 +27,11 @@ namespace IF.Lastfm.Core.Objects
             Body = body;
             TimePosted = DateTime.Parse(time);
         }
+        
+        #endregion
 
+        #region Public methods
+        
         public static LastShout ParseJToken(JToken token)
         {
             var s = new LastShout();
@@ -42,5 +48,7 @@ namespace IF.Lastfm.Core.Objects
 
             return s;
         }
+        
+        #endregion
     }
 }
